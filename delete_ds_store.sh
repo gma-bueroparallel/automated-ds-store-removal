@@ -32,7 +32,9 @@ for DIR in "${DIRECTORIES[@]}"; do
     # Check if the directory exists
     if [ -d "$DIR" ]; then
         log_message "Delete .DS_Store files in: $DIR"
-        find "$DIR" -type f -name ".DS_Store" -exec rm -f {} \;
+        find "$DIR" -type f -name ".DS_Store" -print -exec rm -f {} \; | while read -r FILE; do
+          log_message "Deleted: $FILE"
+        done
     else
         log_message "WARNING: Directory does not exist: $DIR"
     fi
