@@ -106,7 +106,7 @@ To automate the script, create a cron job:
 ---
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under [The Unlicense](LICENSE), which allows you to use, modify, and distribute the project freely without any restrictions.
 
 ---
 
